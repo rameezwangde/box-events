@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Box, Play, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Play, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BrandLogo from '../components/BrandLogo';
 import ClientLogoTile from '../components/ClientLogoTile';
 import GlassCard from '../components/GlassCard';
 import Reveal from '../components/Reveal';
@@ -193,15 +194,7 @@ export default function Home() {
             <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-royal">Trusted by Leading Agencies & Brands</p>
             <h2 className="font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">Client logos in motion</h2>
           </div>
-          <div className="flex items-center gap-3 rounded-3xl border border-blue-100 bg-powder/45 px-5 py-4 shadow-sm">
-            <span className="grid h-12 w-12 place-items-center rounded-2xl bg-royal text-white shadow-glow">
-              <Box size={24} />
-            </span>
-            <span className="leading-none">
-              <span className="block text-lg font-black text-navy">BOX</span>
-              <span className="block text-xs font-black uppercase tracking-[0.2em] text-navy">PRODUCTIONS</span>
-            </span>
-          </div>
+          <BrandLogo compact />
         </div>
         <div className="logo-marquee relative flex w-max gap-5 px-5">
           {[...clientele, ...clientele].map((client, index) => (

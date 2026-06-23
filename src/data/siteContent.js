@@ -90,7 +90,7 @@ export const work = [
   'Technical event support',
 ];
 
-export const clientele = ['Acme', 'DNA Networks', 'Craftsman\'s Crew', 'Neo Entertainment', 'Oscotel', 'SKIL', 'Pixeltone', 'Tradition and Trendz', 'VPN Agencies'];
+export const clientele = ['Acme', 'DNA Networks', 'Craftsman\'s Crew', 'Eblitz Creations', 'Neo Entertainment', 'Oscotel', 'SKIL', 'Pixeltone', 'Tradition and Trendz', 'VPN Agencies', 'Workaholics', 'UBS Forums'];
 
 export const whyChoose = [
   {
