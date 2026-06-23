@@ -23,7 +23,7 @@ export default function ServiceGrid({ limit }) {
       <div className="absolute left-1/2 top-16 h-64 w-[72%] -translate-x-1/2 rounded-full bg-royal/10 blur-3xl" />
       <div className="relative grid gap-5 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
-          <article className="group relative flex min-h-[560px] overflow-hidden rounded-[34px] bg-navy p-7 text-white shadow-glow transition duration-500 hover:-translate-y-1">
+          <article className="reactive-card group relative flex min-h-[560px] overflow-hidden rounded-[34px] bg-navy p-7 text-white shadow-glow transition duration-500 hover:-translate-y-1">
             <img
               src="/event-stage-hero.png"
               alt="Event production company stage setup and technical event support"
@@ -55,7 +55,7 @@ export default function ServiceGrid({ limit }) {
                   ))}
                 </div>
                 <p className="text-xs font-black uppercase tracking-[0.22em] text-champagne">{featured.keywords}</p>
-                <Link to="/services" className="btn-shine mt-7 inline-flex items-center gap-2 rounded-full bg-champagne px-6 py-4 text-sm font-black text-navy">
+                <Link to="/services" className="btn-shine magnetic-cta mt-7 inline-flex items-center gap-2 rounded-full bg-champagne px-6 py-4 text-sm font-black text-navy">
                   View Service
                   <ArrowRight size={16} />
                 </Link>
@@ -69,7 +69,7 @@ export default function ServiceGrid({ limit }) {
             const Icon = service.icon;
             return (
               <Reveal key={service.title} delay={(index + 1) * 0.08}>
-                <article className={`group relative overflow-hidden rounded-[30px] border border-blue-100 bg-gradient-to-br ${serviceTones[index + 1] || serviceTones[0]} p-6 shadow-[0_18px_50px_rgba(6,25,76,.08)] transition duration-500 hover:-translate-y-1 hover:shadow-glow md:p-7`}>
+                <article className={`reactive-card group relative overflow-hidden rounded-[30px] border border-blue-100 bg-gradient-to-br ${serviceTones[index + 1] || serviceTones[0]} p-6 shadow-[0_18px_50px_rgba(6,25,76,.08)] transition duration-500 hover:-translate-y-1 hover:shadow-glow md:p-7`}>
                   <div className="absolute -right-10 -top-12 h-36 w-36 rounded-full bg-white/70 blur-xl" />
                   <div className="absolute bottom-0 right-0 h-full w-28 bg-[linear-gradient(135deg,transparent_35%,rgba(6,78,228,.08)_35%,rgba(6,78,228,.08)_62%,transparent_62%)]" />
                   <div className="relative grid gap-6 md:grid-cols-[88px_1fr_auto] md:items-center">
@@ -97,7 +97,7 @@ export default function ServiceGrid({ limit }) {
           })}
 
           <Reveal delay={0.32}>
-            <div className="grid gap-3 rounded-[30px] border border-blue-100 bg-white/72 p-4 shadow-[0_18px_45px_rgba(6,25,76,.07)] backdrop-blur-xl md:grid-cols-4">
+            <div className="reactive-card grid gap-3 rounded-[30px] border border-blue-100 bg-white/72 p-4 shadow-[0_18px_45px_rgba(6,25,76,.07)] backdrop-blur-xl md:grid-cols-4">
               {['Agency Brief', 'Creative Build', 'Technical Prep', 'Show Day'].map((step, index) => (
                 <div key={step} className="relative rounded-2xl bg-powder/55 px-4 py-4 text-center">
                   <p className="text-[11px] font-black uppercase tracking-[0.18em] text-royal">Step 0{index + 1}</p>

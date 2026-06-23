@@ -7,7 +7,7 @@ export default function StatsBar({ className = '' }) {
       {stats.map((stat) => {
         const Icon = stat.icon;
         return (
-          <div key={stat.label} className="flex items-center gap-3 rounded-2xl border border-blue-100 bg-white px-4 py-4 shadow-sm">
+          <div key={stat.label} className="reactive-card flex items-center gap-3 rounded-2xl border border-blue-100 bg-white px-4 py-4 shadow-sm">
             <Icon className="shrink-0 text-royal" size={25} />
             <div>
               <p className="text-2xl font-black leading-none"><CountUp value={stat.value} suffix={stat.suffix} /></p>

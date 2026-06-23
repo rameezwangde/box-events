@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import ReactiveEffects from './components/ReactiveEffects';
 import Seo from './components/Seo';
 import About from './pages/About';
 import Clientele from './pages/Clientele';
@@ -12,7 +13,7 @@ import Services from './pages/Services';
 export default function App() {
   return (
     <>
-      <Seo />
+      <Seo />`r`n      <ReactiveEffects />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

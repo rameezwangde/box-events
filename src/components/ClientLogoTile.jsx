@@ -17,7 +17,7 @@ export default function ClientLogoTile({ client, compact = false }) {
   const src = logos[client];
 
   return (
-    <div className={`group flex ${compact ? 'h-28 min-w-[250px]' : 'h-40'} items-center justify-center rounded-[28px] border border-blue-100 bg-white px-7 shadow-[0_18px_45px_rgba(6,25,76,.07)] transition hover:-translate-y-1 hover:border-champagne hover:shadow-gold`}>
+    <div className={`reactive-card group flex ${compact ? 'h-28 min-w-[250px]' : 'h-40'} items-center justify-center rounded-[28px] border border-blue-100 bg-white px-7 shadow-[0_18px_45px_rgba(6,25,76,.07)] transition hover:-translate-y-1 hover:border-champagne hover:shadow-gold`}>
       {src ? (
         <img
           src={src}

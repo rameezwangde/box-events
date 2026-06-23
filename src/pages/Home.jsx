@@ -13,7 +13,10 @@ import { clientele, company, equipmentServices, whyChoose, work } from '../data/
 export default function Home() {
   return (
     <main>
-      <section className="relative min-h-screen overflow-hidden bg-porcelain bg-radial-blue px-5 pb-16 pt-32 lg:px-8">
+      <section className="reactive-hero relative min-h-screen overflow-hidden bg-porcelain bg-radial-blue px-5 pb-16 pt-40 lg:px-8">
+        {[12, 28, 44, 66, 82].map((left, index) => (
+          <span key={left} className="stage-particle" style={{ left: `${left}%`, top: `${22 + index * 13}%`, animationDelay: `${index * 0.7}s` }} />
+        ))}
         <div className="parallax-glow left-[8%] top-32" />
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[.82fr_1.18fr]">
           <motion.div initial={{ opacity: 0, y: 34 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}>
@@ -23,18 +26,18 @@ export default function Home() {
             </h1>
             <p className="mt-7 max-w-xl text-base leading-8 text-slate-600 md:text-lg">{company.intro}</p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              <Link to="/services" className="btn-shine inline-flex items-center gap-2 rounded-full bg-royal px-6 py-4 text-sm font-black text-white shadow-glow">
+              <Link to="/services" className="btn-shine magnetic-cta inline-flex items-center gap-2 rounded-full bg-royal px-6 py-4 text-sm font-black text-white shadow-glow">
                 Explore Our Services
                 <ArrowRight size={17} />
               </Link>
-              <Link to="/our-work" className="inline-flex items-center gap-3 rounded-full border border-navy/10 bg-white/72 px-6 py-4 text-sm font-black text-navy backdrop-blur-xl">
+              <Link to="/our-work" className="magnetic-cta inline-flex items-center gap-3 rounded-full border border-navy/10 bg-white/72 px-6 py-4 text-sm font-black text-navy backdrop-blur-xl">
                 <span className="grid h-8 w-8 place-items-center rounded-full border border-royal/30 text-royal"><Play size={14} fill="currentColor" /></span>
                 Watch Showreel
               </Link>
             </div>
             <div className="mt-10 grid gap-3 sm:grid-cols-3">
               {['Trusted by Top Agencies', '24/7 Support Always Available', 'Premium Quality Reliable Gear'].map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-2xl border border-blue-100 bg-white/64 p-4 shadow-sm backdrop-blur-xl">
+                <div key={item} className="reactive-card flex items-center gap-3 rounded-2xl border border-blue-100 bg-white/64 p-4 shadow-sm backdrop-blur-xl">
                   <ShieldCheck className="text-champagne" size={23} />
                   <p className="text-xs font-black text-navy">{item}</p>
                 </div>
@@ -101,13 +104,13 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="relative rounded-[38px] border border-white/14 bg-white/[0.07] p-4 shadow-glow backdrop-blur-2xl md:p-6">
+            <div className="reactive-card relative rounded-[38px] border border-white/14 bg-white/[0.07] p-4 shadow-glow backdrop-blur-2xl md:p-6">
               <div className="absolute -left-8 top-12 hidden h-[72%] w-px bg-gradient-to-b from-transparent via-champagne to-transparent lg:block" />
               <div className="grid gap-4">
                 {whyChoose.map((item, index) => {
                   const Icon = item.icon;
                   return (
-                    <article key={item.title} className="group relative grid gap-5 rounded-[28px] border border-white/10 bg-white/[0.08] p-5 transition duration-500 hover:-translate-y-1 hover:border-champagne/40 hover:bg-white/[0.12] md:grid-cols-[72px_1fr] md:p-6">
+                    <article key={item.title} className="reactive-card group relative grid gap-5 rounded-[28px] border border-white/10 bg-white/[0.08] p-5 transition duration-500 hover:-translate-y-1 hover:border-champagne/40 hover:bg-white/[0.12] md:grid-cols-[72px_1fr] md:p-6">
                       <div className="absolute -left-[39px] top-1/2 hidden h-3 w-3 -translate-y-1/2 rounded-full bg-champagne shadow-gold lg:block" />
                       <div className="grid h-16 w-16 place-items-center rounded-3xl border border-champagne/35 bg-navy text-champagne transition duration-500 group-hover:scale-105 group-hover:bg-champagne group-hover:text-navy">
                         <Icon size={28} />
@@ -137,7 +140,7 @@ export default function Home() {
           <SectionHeader eyebrow="Our Work" title="Built for Agency-Led Productions" copy="From stage setup to LED wall rental and lighting and sound solutions, BOX PRODUCTIONS supports event execution with premium rental equipment and technical teams." />
           <div className="mt-14 grid gap-6 lg:grid-cols-[1.08fr_.92fr] lg:items-stretch">
             <Reveal>
-              <article className="group relative min-h-[560px] overflow-hidden rounded-[38px] bg-navy shadow-glow">
+              <article className="reactive-card group relative min-h-[560px] overflow-hidden rounded-[38px] bg-navy shadow-glow">
                 <img src="/event-stage-hero.png" alt="BOX PRODUCTIONS stage setup LED wall rental lighting and sound solutions" className="absolute inset-0 h-full w-full object-cover opacity-75 transition duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,25,76,.18),rgba(6,25,76,.92))]" />
                 <div className="absolute left-6 top-6 rounded-full border border-white/20 bg-white/12 px-5 py-3 text-xs font-black uppercase tracking-[0.22em] text-white backdrop-blur-xl">Production Showcase</div>
@@ -158,7 +161,7 @@ export default function Home() {
             <div className="grid gap-4">
               {work.slice(3).map((item, index) => (
                 <Reveal key={item} delay={index * 0.08}>
-                  <article className="group relative overflow-hidden rounded-[30px] border border-blue-100 bg-white p-6 shadow-[0_18px_50px_rgba(6,25,76,.08)] transition duration-500 hover:-translate-y-1 hover:shadow-glow md:p-7">
+                  <article className="reactive-card group relative overflow-hidden rounded-[30px] border border-blue-100 bg-white p-6 shadow-[0_18px_50px_rgba(6,25,76,.08)] transition duration-500 hover:-translate-y-1 hover:shadow-glow md:p-7">
                     <div className="absolute -right-10 top-0 h-28 w-28 rounded-full bg-royal/10 blur-2xl" />
                     <div className="relative flex items-start gap-5">
                       <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-powder text-lg font-black text-royal">0{index + 4}</span>
@@ -175,7 +178,7 @@ export default function Home() {
                 <div className="rounded-[30px] bg-navy p-6 text-white shadow-glow md:p-7">
                   <p className="text-xs font-black uppercase tracking-[0.24em] text-champagne">Built for show day</p>
                   <p className="mt-4 text-2xl font-black leading-tight">Premium rental equipment, technical teams, and execution services aligned for agencies.</p>
-                  <Link to="/our-work" className="btn-shine mt-6 inline-flex items-center gap-2 rounded-full bg-champagne px-5 py-3 text-sm font-black text-navy">
+                  <Link to="/our-work" className="btn-shine magnetic-cta mt-6 inline-flex items-center gap-2 rounded-full bg-champagne px-5 py-3 text-sm font-black text-navy">
                     View Our Work
                     <ArrowRight size={16} />
                   </Link>
@@ -211,7 +214,7 @@ export default function Home() {
               <h2 className="font-display text-4xl font-semibold md:text-5xl">Reliable Gear. Flawless Events.</h2>
               <p className="mt-5 max-w-2xl text-blue-100">We do not just provide equipment, we provide peace of mind.</p>
             </div>
-            <Link to="/contact" className="btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-champagne px-7 py-4 text-sm font-black text-navy">
+            <Link to="/contact" className="btn-shine magnetic-cta inline-flex items-center justify-center gap-2 rounded-full bg-champagne px-7 py-4 text-sm font-black text-navy">
               Let&apos;s Work Together
               <ArrowRight size={16} />
             </Link>
