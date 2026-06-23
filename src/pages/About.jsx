@@ -34,9 +34,9 @@ export default function About() {
               const Icon = item.icon;
               const active = index === 2;
               return (
-                <Reveal key={item.title} delay={index * 0.06}>
+                <Reveal key={item.title} delay={index * 0.06} className="h-full">
                   <article
-                    className={`relative min-h-[315px] rounded-none border bg-white/72 px-7 py-8 text-center shadow-[0_18px_50px_rgba(6,25,76,.06)] backdrop-blur-xl transition duration-500 hover:-translate-y-1 hover:shadow-glow ${
+                    className={`relative flex h-full min-h-[500px] flex-col items-center justify-start rounded-none border bg-white/72 px-7 py-10 text-center shadow-[0_18px_50px_rgba(6,25,76,.06)] backdrop-blur-xl transition duration-500 hover:-translate-y-1 hover:shadow-glow ${
                       active ? 'border-dashed border-royal' : 'border-dashed border-blue-200 hover:border-champagne'
                     }`}
                   >
@@ -46,7 +46,7 @@ export default function About() {
                       0{index + 1}
                     </div>
                     <Icon className={`mx-auto mt-8 ${active ? 'text-royal' : 'text-champagne'}`} size={34} />
-                    <h2 className={`mt-5 text-xl font-black ${active ? 'text-royal' : 'text-ink'}`}>{item.title}</h2>
+                    <h2 className={`mt-8 min-h-[64px] text-xl font-black ${active ? 'text-royal' : 'text-ink'}`}>{item.title}</h2>
                     <p className="mt-4 text-sm leading-7 text-slate-600">{item.description}</p>
                   </article>
                 </Reveal>
