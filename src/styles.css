@@ -6,7 +6,7 @@
 
 :root {
   color: #071126;
-  background: #fbfaf6;
+  background: #f7efe1;
   font-synthesis: none;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
@@ -26,9 +26,9 @@ body {
   min-width: 320px;
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
   background:
-    linear-gradient(120deg, rgba(255, 255, 255, 0.92), rgba(251, 250, 246, 0.96)),
+    linear-gradient(120deg, rgba(247, 239, 225, 0.94), rgba(242, 232, 214, 0.96)),
     radial-gradient(circle at 0% 0%, rgba(6, 78, 228, 0.1), transparent 28%),
-    #fbfaf6;
+    #f7efe1;
 }
 
 a {

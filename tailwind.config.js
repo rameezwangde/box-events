@@ -7,9 +7,9 @@ export default {
         navy: '#06194c',
         royal: '#064ee4',
         powder: '#eaf2ff',
-        porcelain: '#fbfaf6',
+        porcelain: '#f7efe1',
         champagne: '#e8c878',
-        sand: '#efe5d4',
+        sand: '#eadcc8',
         ink: '#071126',
       },
       fontFamily: {
